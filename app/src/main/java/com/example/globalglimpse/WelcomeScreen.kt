@@ -44,7 +44,7 @@ fun WelcomeScreen(onProceed: () -> Unit) {
             modifier = Modifier.padding(top = 10.dp , bottom = 5.dp )
         )
         Text(
-            text = "Your guide to the Seven Wonders of the World",
+            text = "Your guide to knowing information about the world",
             style = MaterialTheme.typography.bodyMedium,
             textAlign = TextAlign.Center
         )
