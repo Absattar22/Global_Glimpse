@@ -1,6 +1,6 @@
 # Global Glimpse App
 
-It is a place for people who love geography and know some historical information. In the Global Glimpses application, the first version displays information about the new Seven Wonders of the World, and it is still there after other versions of it.
+It is a place for people who love geography and Want to know some historical information. In Global Glimpses App, the first version displays information about the new Seven Wonders of the World, and it still there other versions of it.
 
 <div style="display: flex;">
      <img src="https://github.com/Absattar22/Global_Glimpse/assets/116181912/20f0c59c-e670-4d12-86f2-5f715ac71c89" alt="Image 1" style="width: 30%;">
