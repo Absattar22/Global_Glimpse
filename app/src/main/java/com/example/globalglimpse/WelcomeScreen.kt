@@ -21,9 +21,11 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.navigation.compose.rememberNavController
 
 @Composable
-fun WelcomeScreen(onProceed: () -> Unit) {
+fun WelcomeScreen(onProceed: () -> Unit , modifier: Modifier) {
+    val navController = rememberNavController()
     Column(
         modifier = Modifier
             .fillMaxSize(),

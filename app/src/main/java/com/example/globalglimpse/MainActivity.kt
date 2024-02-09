@@ -12,21 +12,41 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import com.example.globalglimpse.ui.theme.GlobalGlimpseTheme
 
-
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+            var showWelcomeScreen by remember { mutableStateOf(true) }
+            var showNewWondersScreen by remember { mutableStateOf(false) }
+            var showOldWondersScreen by remember { mutableStateOf(false) }
+
             GlobalGlimpseTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize()
                 ) {
-                    var showWelcomeScreen by remember { mutableStateOf(true) }
-
                     if (showWelcomeScreen) {
-                        WelcomeScreen(onProceed = { showWelcomeScreen = false })
+                        WelcomeScreen(
+                            modifier = Modifier.fillMaxSize(),
+                            onProceed = { showWelcomeScreen = false }
+                        )
                     } else {
-                        InformationScreen()
+                        if (!showNewWondersScreen && !showOldWondersScreen) {
+                            DisplayScreen(
+                                modifier = Modifier.fillMaxSize(),
+                                onInformationClicked = { showNewWondersScreen = true },
+                                onOldWondersClicked = { showOldWondersScreen = true }
+                            )
+                        } else if (showNewWondersScreen) {
+                            InformationScreen(
+                                modifier = Modifier.fillMaxSize(),
+                                onBackClicked = { showNewWondersScreen = false }
+                            )
+                        } else if (showOldWondersScreen) {
+                            OldWondersScreen(
+                                modifier = Modifier.fillMaxSize(),
+                                onBackClicked = { showOldWondersScreen = false }
+                            )
+                        }
                     }
                 }
             }
