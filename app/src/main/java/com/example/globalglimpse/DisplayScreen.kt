@@ -34,7 +34,7 @@ fun DisplayScreen(
             )
 
             Text(
-                text = "What Do You Want to Read About?",
+                text = "What Do You Want to Read About in our app ?",
                 fontSize = 20.sp,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(bottom = 10.dp , start = 20.dp)
